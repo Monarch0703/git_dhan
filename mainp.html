@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CareerConnect - Job Recruitment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f7fa;
+            color: #222;
+        }
+        header {
+            background: linear-gradient(90deg, #005bea 0%, #3ec6e0 100%);
+            color: #fff;
+            padding: 30px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #005bea;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #3ec6e0;
+        }
+        .search-section {
+            max-width: 600px;
+            margin: 40px auto 30px auto;
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+        .search-section input, .search-section select {
+            flex: 1 1 180px;
+            padding: 12px;
+            border: 1px solid #dbeafe;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .search-section button {
+            background: #005bea;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-section button:hover {
+            background: #3ec6e0;
+        }
+        .jobs-list {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+        .job-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.15s;
+        }
+        .job-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #005bea;
+        }
+        .job-company {
+            font-size: 1rem;
+            color: #444;
+        }
+        .job-location {
+            font-size: 0.95rem;
+            color: #3ec6e0;
+        }
+        .job-desc {
+            font-size: 0.98rem;
+            color: #555;
+            margin: 8px 0;
+        }
+        .apply-btn {
+            align-self: flex-start;
+            background: #3ec6e0;
+            color: #fff;
+            border: none;
+            padding: 8px 22px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .apply-btn:hover {
+            background: #005bea;
+        }
+        footer {
+            background: #f1f5f9;
+            color: #555;
+            text-align: center;
+            padding: 18px 0;
+            font-size: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        @media (max-width: 700px) {
+            .search-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .jobs-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CareerConnect</h1>
+        <p>Your gateway to exciting career opportunities</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Jobs</a>
+        <a href="#">Companies</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="search-section">
+        <input type="text" placeholder="Job title or keyword">
+        <input type="text" placeholder="Location">
+        <select>
+            <option value="">Category</option>
+            <option>Technology</option>
+            <option>Design</option>
+            <option>Marketing</option>
+            <option>Finance</option>
+            <option>Healthcare</option>
+        </select>
+        <button>Search</button>
+    </section>
+    <section class="jobs-list">
+        <div class="job-card">
+            <div class="job-title">Frontend Developer</div>
+            <div class="job-company">TechNova Solutions</div>
+            <div class="job-location">Remote</div>
+            <div class="job-desc">Join our dynamic team to build modern web applications using React and TypeScript.</div>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <div class="job-title">UI/UX Designer</div>
+            <div class="job-company">Creative Minds</div>
+            <div class="job-location">New York, NY</div>
+            <div class="job-desc">Design intuitive interfaces and engaging user experiences for mobile and web platforms.</div>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <div class="job-title">Digital Marketing Specialist</div>
+            <div class="job-company">MarketGenius</div>
+            <div class="job-location">San Francisco, CA</div>
+            <div class="job-desc">Drive growth through innovative digital campaigns and analytics-driven strategies.</div>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <div class="job-title">Financial Analyst</div>
+            <div class="job-company">FinEdge Corp</div>
+            <div class="job-location">Chicago, IL</div>
+            <div class="job-desc">Analyze financial data and provide insights to support business decisions.</div>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 CareerConnect. All rights reserved.
+    </footer>
+</body>
+</html>
